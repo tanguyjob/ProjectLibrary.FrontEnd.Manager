@@ -1,0 +1,29 @@
+<div class="m-5">
+    <h1>Livres</h1>
+    <div class="row mb-5">
+        <div class="col-3">
+             <button type="button" class="btn btn-primary" (click)="create()">Créer un nouveau livre</button>
+        </div>
+        <!-- <div class="col-6">
+            <button type="button" class="mt-5 btn btn-primary" (click)="bind()">Lier un auteur à un livre</button> 
+        </div> -->
+    </div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">Titre</th>
+        <th scope="col">Date de publication</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let book of books; index as i">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>
+            {{ book.title }}
+        </td>
+        <td>{{ book.publicationDate }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
