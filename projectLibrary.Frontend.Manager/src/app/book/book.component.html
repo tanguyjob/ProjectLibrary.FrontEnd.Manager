@@ -22,7 +22,7 @@
         <td>
             {{ book.title }}
         </td>
-        <td>{{ book.publicationDate }}</td>
+        <td>{{ book.publicationDate | date: "dd/MM/yyyy"  }}</td>
         </tr>
         </tbody>
     </table>
