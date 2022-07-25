@@ -11,6 +11,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BookComponent } from './book/book.component';
 import { RouterModule } from '@angular/router';
 import { CreateBookComponent } from './create-book/create-book.component';
+import { AuthorComponent } from './author/author.component';
+import { CreateAuthorComponent } from './create-author/create-author.component';
 // utiliser angular-bootstrap
 
 @NgModule({
@@ -18,7 +20,9 @@ import { CreateBookComponent } from './create-book/create-book.component';
     AppComponent,
     TopBarComponent,
     BookComponent,
-    CreateBookComponent
+    CreateBookComponent,
+    AuthorComponent,
+    CreateAuthorComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -30,7 +34,9 @@ import { CreateBookComponent } from './create-book/create-book.component';
     RouterModule.forRoot([
       { path: '', component: BookComponent },
       { path: 'book', component: BookComponent},
-      { path: 'create-book', component: CreateBookComponent}
+      { path: 'create-book', component: CreateBookComponent},
+      { path: 'author', component: AuthorComponent},
+      { path: 'create-author', component: CreateAuthorComponent}
     ])
   ],
   providers: [],

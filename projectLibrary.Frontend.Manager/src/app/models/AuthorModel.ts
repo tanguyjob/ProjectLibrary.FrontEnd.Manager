@@ -4,3 +4,4 @@ export class AuthorModel {
     firstname!: string;
     birthdate!: Date;
 }
+

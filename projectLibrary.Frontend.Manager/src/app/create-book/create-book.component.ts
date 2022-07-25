@@ -28,7 +28,7 @@ export class CreateBookComponent implements OnInit {
       title:'',
       resume:'',
       publicationDate:'',
-      languageId:[null]
+      language:[null]
     });
 
     this.subscr = this.dal.getLanguage().subscribe(
@@ -41,8 +41,12 @@ export class CreateBookComponent implements OnInit {
   }
 
   onSubmit(form: FormGroup) {
-    let mybook = new BookModel(form.value.title, form.value.resume,form.value.publicationDate, form.value.languageId);
-
+    let mybook = new BookModel(form.value.title, form.value.resume,form.value.publicationDate, form.value.language);
+    this.subscr=this.dal.postBook(mybook).subscribe(
+          () => {
+            this.router.navigate(['/book']);
+          }
+        );
     // console.log("ma langue",form.value.language);
     // this.subscr=this.baSrv.postBook2(mybook).subscribe(
     //     () => {

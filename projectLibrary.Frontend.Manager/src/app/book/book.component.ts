@@ -29,6 +29,10 @@ export class BookComponent implements OnInit {
       }
       );
     }
+
+    ngOnDestroy():void {
+      this.subscr.unsubscribe();
+    }
   }
 
 
