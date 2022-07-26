@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
 import { CreateBookComponent } from './create-book/create-book.component';
 import { AuthorComponent } from './author/author.component';
 import { CreateAuthorComponent } from './create-author/create-author.component';
+import { CreateBindingBookAuthorComponent } from './create-binding-book-author/create-binding-book-author.component';
 // utiliser angular-bootstrap
 
 @NgModule({
@@ -22,7 +23,8 @@ import { CreateAuthorComponent } from './create-author/create-author.component';
     BookComponent,
     CreateBookComponent,
     AuthorComponent,
-    CreateAuthorComponent
+    CreateAuthorComponent,
+    CreateBindingBookAuthorComponent
   ],
   imports: [
     ReactiveFormsModule,
