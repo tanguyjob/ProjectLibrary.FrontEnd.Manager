@@ -18,14 +18,16 @@ export class AuthorComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.subscr = this.dal.getAuthor().subscribe(
+    this.subscr = this.dal.getAuthors().subscribe(
       (value)=>
       {
       this.authors=value;
       }
       );
   }
-
+ bind() {
+    this.router.navigate(['create-binding']);
+  }
   ngOnDestroy():void {
     this.subscr.unsubscribe();
   }

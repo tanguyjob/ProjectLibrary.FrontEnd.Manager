@@ -20,7 +20,9 @@ export class BookComponent implements OnInit {
   create() {
     this.router.navigate(['create-book']);
     }
-
+  bind() {
+      this.router.navigate(['create-binding']);
+      }
   ngOnInit(): void {
     this.subscr = this.dal.getBook().subscribe(
       (value)=>

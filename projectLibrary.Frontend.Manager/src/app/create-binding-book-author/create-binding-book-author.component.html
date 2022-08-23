@@ -1,1 +1,22 @@
-<p>create-binding-book-author works!</p>
+<div class="m-5">
+    <h1 class="mb-5">Livres</h1>
+    <div class="mb-5">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+        <div class="form-group">
+            <label>Livre: &nbsp;&nbsp;&nbsp; </label>
+            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" formControlName="book">
+                <option *ngFor="let book of books" [ngValue]="book.id">{{ book.title }}
+                </option>
+            </select>
+            <p> lié avec &nbsp;&nbsp;&nbsp;</p>
+            <label>Auteur: &nbsp;&nbsp;&nbsp; </label>
+            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" formControlName="author">
+                <option *ngFor="let author of authors" [ngValue]="author.id">{{ author.name }} {{ author.firstname }}
+                </option>
+            </select>
+
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid">Lier</button>
+    </form>
+    </div>
+</div>

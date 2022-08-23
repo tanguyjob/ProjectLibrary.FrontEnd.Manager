@@ -14,6 +14,8 @@ import { CreateBookComponent } from './create-book/create-book.component';
 import { AuthorComponent } from './author/author.component';
 import { CreateAuthorComponent } from './create-author/create-author.component';
 import { CreateBindingBookAuthorComponent } from './create-binding-book-author/create-binding-book-author.component';
+import { AuthorDetailComponent } from './author-detail/author-detail.component';
+import { BookDetailComponent } from './book-detail/book-detail.component';
 // utiliser angular-bootstrap
 
 @NgModule({
@@ -24,7 +26,9 @@ import { CreateBindingBookAuthorComponent } from './create-binding-book-author/c
     CreateBookComponent,
     AuthorComponent,
     CreateAuthorComponent,
-    CreateBindingBookAuthorComponent
+    CreateBindingBookAuthorComponent,
+    AuthorDetailComponent,
+    BookDetailComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -38,7 +42,9 @@ import { CreateBindingBookAuthorComponent } from './create-binding-book-author/c
       { path: 'book', component: BookComponent},
       { path: 'create-book', component: CreateBookComponent},
       { path: 'author', component: AuthorComponent},
-      { path: 'create-author', component: CreateAuthorComponent}
+      { path: 'author-detail/:id', component: AuthorDetailComponent},
+      { path: 'create-author', component: CreateAuthorComponent},
+      { path: 'create-binding', component: CreateBindingBookAuthorComponent}
     ])
   ],
   providers: [],

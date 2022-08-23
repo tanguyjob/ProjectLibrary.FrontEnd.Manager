@@ -4,9 +4,9 @@
         <div class="col-3">
              <button type="button" class="btn btn-primary" (click)="create()">Créer un nouveau livre</button>
         </div>
-        <!-- <div class="col-6">
-            <button type="button" class="mt-5 btn btn-primary" (click)="bind()">Lier un auteur à un livre</button> 
-        </div> -->
+        <div class="col-6">
+            <button type="button" class="btn btn-primary" (click)="bind()">Lier un auteur à un livre</button> 
+        </div>
     </div>
     <table class="table table-striped">
         <thead>
@@ -18,7 +18,11 @@
         </thead>
         <tbody>
         <tr *ngFor="let book of books; index as i">
-        <th scope="row">{{ i + 1 }}</th>
+        <th scope="row">
+            <a routerLink="/book-detail/{{ book.id }}">
+                {{ i + 1 }}
+            </a>
+        </th>
         <td>
             {{ book.title }}
         </td>

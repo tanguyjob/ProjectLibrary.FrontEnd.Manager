@@ -1,0 +1,16 @@
+a {
+    color: rgba(54, 54, 54, 0.7);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgba(54, 54, 54, 1);
+}
+
+.line {
+    border-bottom: 1px solid rgb(54, 54, 54);
+}
+
+.row {
+    font-size: larger;
+}
